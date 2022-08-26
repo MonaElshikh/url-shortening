@@ -1,0 +1,323 @@
+
+/***************************** Start Global *****************************/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    /* Primary */
+    --cyan: hsl(180, 66%, 49%);
+    --dark-violet: hsl(257, 27%, 26%);
+  /* Secondary */
+    --red: hsl(0, 87%, 67%);
+   /* Neutral */
+    --gray: hsl(0, 0%, 75%);
+    --grayish-violet: hsl(257, 7%, 63%);
+    --very-dark-blue: hsl(255, 11%, 22%);
+    --very-dark-violet: hsl(260, 8%, 14%);
+    --section-bg:hsl(230,25%,95%);
+    --radius:5px
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main {
+    background-color: var(--section-bg);
+}
+.container {
+    padding-inline: 20px;
+}
+.main-btn {
+    background-color: var(--cyan);
+    padding: 15px 40px;
+    outline: none;
+    border:none;
+    border-radius: 35px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.main-btn:hover {
+    opacity: .5;
+}
+/***************************** End Global ******************************/
+/***************************** Start Header *****************************/
+
+ header .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: white;
+}
+header .container > img {
+    max-width: 100%;
+}
+header .container > .menu {
+    flex:1;
+}
+.menu .toggle {
+    width: 35px;
+    margin-right: 0;
+    margin-left: auto;
+}
+.toggle > span {
+    display: block;
+    width: 80%;
+    height: 2.5px;
+    background-color: var(--gray);
+    margin-bottom: 6px;
+}
+.menu > ul {
+    display: none;
+    position: absolute;
+    background-color: var(--dark-violet);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    top: 70px;
+    width: 90%;
+    left: 17px;
+    text-align: center;
+    z-index: 3;
+}
+.menu > ul > li {
+    margin: 25px 0;
+}
+.menu > ul > li > a {
+    font-weight: 700;
+}
+.menu > ul > li:nth-child(4) {
+    border-top: solid 1px var(--grayish-violet);
+    padding-top: 20px;
+}
+/***************************** End Header *****************************/
+/***************************** Start Landing **************************/
+.landing {
+ position: relative;
+ padding-bottom: 125px;
+ background-color: white;
+}
+.landing .landing-img {
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+}
+.landing .landing-img > img {
+    width: 500px;
+    position: relative;
+    right: -25px
+}
+.landing-data {
+    text-align: center;
+}
+.landing-data > h1 {
+    color: var(--very-dark-violet);
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+.landing-data > p {
+    padding: 20px;
+    color: var(--grayish-violet);
+    line-height: 1.5;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+/***************************** End Landing **************************/
+/***************************** Start shorten *****************************/
+.shorten {
+    text-align: center;
+    position: relative;
+}
+.shorten  .form {
+    background: url('/images/bg-shorten-mobile.svg');
+    background-color: var(--dark-violet);
+    padding: 20px;
+    border-radius:var(--radius);
+    position: relative;
+    top: -75px;
+    margin-bottom: 20px;
+}
+.shorten  .form > input {
+   border:2px solid transparent;
+   padding: 15px 10px;
+   border-radius:var(--radius);
+   width: 100%;
+   margin-bottom:15px;
+}
+.shorten  .form > input.error {
+    border-color: var(--red);
+    margin-bottom:5px;
+}
+.err-msg {
+    display: none;
+    color: var(--red);
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.shorten  .form > button {
+    background-color: var(--cyan);
+    padding: 15px 40px;
+    outline: none;
+    border:none;
+    border-radius:var(--radius);
+    color: white;
+    width: 100%;
+}
+
+.shorten .copy-link {
+    background-color: white;
+    border-radius: var(--radius);
+    top: -75px;
+    position: relative;
+    margin-bottom: 25px;
+}
+.copy-link > h4 {
+    margin: 0;
+    padding: 15px 20px;
+    text-align: left;
+    color: var(--dark-violet);
+    font-size: 16px;
+}
+.copy-link > h4:nth-child(2) {
+    border-top: solid 1px var(--gray);
+    color: var(--cyan);
+}
+.copy-link > button {
+    border-radius: var(--radius);
+    width: 90%;
+    margin-bottom: 20px;
+}
+.copy-link > button.copied {
+    background-color: var(--dark-violet);
+}
+/****************************** End shorten *****************************/
+/****************************** Start Features **************************/
+.features {
+    text-align: center;
+    position: relative;
+    padding-bottom:1px;
+}
+.feat-data > h2 {
+    color: var(--very-dark-violet);
+    font-weight: 700;
+}
+ .feat-data > p {
+    color: var(--grayish-violet);
+    line-height: 1.8;
+    font-size: 16px;
+    margin: 0;
+}
+.feat-boxes {
+    position: relative;
+    margin-top: 100px;
+}
+.feat-boxes::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    background-color: var(--cyan);
+}
+.feat-boxes .feat-box {
+    position: relative;
+    background-color: white;
+    border-radius: var(--radius);
+    padding:15px;
+    margin-bottom: 100px;
+}
+.feat-boxes .feat-box:last-child {
+    margin-bottom: 70px;
+}
+.feat-box .feat-img {
+    position: relative;
+    top:-65px;
+    left:50%;
+    transform:translateX(-50%);
+    background-color: var(--dark-violet);
+    border-radius: 50%;
+    width:100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feat-box > h3 {
+    margin: 0;
+    margin-top: -35px;
+    color: var(--very-dark-violet);
+    font-size: 26px;
+}
+.feat-box > p {
+    color:var(--grayish-violet);
+    line-height: 1.5;
+}
+/****************************** End Features **************************/
+/****************************** Start Boots ***************************/
+.boots {
+    background: url('/images/bg-boost-mobile.svg');
+    background-size: cover;
+    background-color: var(--dark-violet);
+    padding: 70px;
+    text-align: center;
+}
+.boots > h2 {
+    color:white;
+    font-size: 20px;
+    margin-top: 35px;
+}
+/****************************** End Boots ***************************/
+/****************************** Start Footer ************************/
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--very-dark-violet);
+    color: white;
+}
+footer > h2 {
+    color: var(--section-bg);
+    margin-bottom:50px;
+}
+.footer-lists > ul > li {
+    margin-bottom: 40px;
+}
+.footer-lists > ul > li > a {
+    color: var(--section-bg);
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: block;
+}
+.footer-lists > ul > li > ul > li {
+    margin-bottom: 10px;
+}
+.footer-lists > ul > li > ul > li > a {
+    color: var(--gray);
+}
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-social > img {
+    margin-right: 20px;
+}
+
+/****************************** End Footer ************************/
+
+

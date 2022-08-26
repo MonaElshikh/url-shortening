@@ -1,0 +1,211 @@
+@media (min-width:1200px) {
+    button:hover {
+        opacity: .5;
+    }
+/******************************* Start Header *******************************/
+.container {
+    padding-inline:115px;
+}
+    header .container {
+        padding-top: 20px;
+    }
+    .toggle {
+        display: none;
+    }
+    .menu > ul {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        color: var(--grayish-violet);
+        top:0;
+        left: 0;
+        position: relative;
+    }
+    .menu > ul > li {
+        display: inline-block;
+        margin: 0;
+        margin-inline: 20px;
+    }
+    .menu > ul > li:nth-child(4) {
+        border: none;
+        padding: 0;
+        margin-right: 0px;
+        margin-left: auto;
+    }
+    .menu > ul > li:last-child {
+        color: white;
+        margin-right: -100px;
+        padding: 10px 30px;
+    }
+    .menu > ul > li > a:hover:not(.main-btn) {
+        color: var(--dark-violet);
+    }
+/******************************** End Header ********************************/
+/******************************** Start Landing *****************************/
+    .landing {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .landing .landing-img > img {
+        width: 725px;
+        position: relative;
+        right: -145px;
+        top: 15px;
+    }
+    .landing-data {
+        order: -1;
+        width: 500px;
+        margin-left: 110px;
+        text-align: left;
+    }
+    .landing-data  > h1 {
+        font-size:55px;
+        margin-top: 0;
+    }
+    .landing-data > p {
+        padding: 0;
+    }
+/******************************** End Landing ********************************/
+/******************************** Start Shorten ******************************/
+    .shorten .form {
+        background: url('/images/bg-shorten-desktop.svg');
+        background-color: var(--dark-violet);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-inline: auto;
+        width: 80vw;
+        padding: 44px;
+        position: relative;
+    }
+    .shorten .form > input {
+        width: 80vw;
+        padding: 15px;
+        margin: 0;
+    }
+    .shorten .form > p {
+        position: absolute;
+        top: 110px;
+        left: 45px;
+    }
+    .shorten .form > button {
+        width: 15vw;
+       margin-left: 20px;
+    }
+    .shorten .copy-link {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        width: 80vw;
+        margin-inline: auto;
+    }
+    .copy-link > h4 {
+        margin: 0;
+        padding: 15px 20px;
+        text-align: left;
+        color: var(--dark-violet);
+        font-size: 16px;
+        flex: 1;
+    }
+    .copy-link > h4:nth-child(2) {
+        border-top: none;
+        color: var(--cyan);
+        text-align: right;
+    }
+    .copy-link > button {
+        width: 155px;
+        margin-bottom: 0px;
+    }
+/******************************** End Shorten *******************************/
+/******************************** Start Features ****************************/
+    .feat-data {
+        width: 600px;
+        margin-inline: auto;
+    }
+    .feat-data > h2 {
+        font-size: 40px;
+    }
+    .feat-data > p {
+        font-size: 18px;
+    }
+    .feat-box .feat-img {
+      left: 20%;
+      top: -74px;
+    }
+    .feat-boxes {
+        position: relative;
+        display: flex;
+        height: 600px;
+        align-items: center;
+        margin-top: 0;
+    }
+    .feat-boxes::before {
+        content: '';
+        position: absolute;
+        width: 97%;
+        height: 10px;
+        left: 0;
+        background-color: var(--cyan);
+    }
+    .feat-boxes .feat-box {
+        margin-right: 30px;
+        padding-inline: 25px;
+    }
+    .feat-boxes .feat-box:nth-child(2){
+        margin-top: 90px;
+    }
+    .feat-boxes .feat-box:last-child {
+        margin-top: 165px
+    }
+    .feat-box > h3 , .feat-box > p {
+        text-align: left;
+    }
+/******************************** End Features ******************************/
+/****************************** Start Boots ***************************/
+.boots {
+    background: url('/images/bg-boost-desktop.svg');
+    background-size: cover;
+    background-color: var(--dark-violet);
+    padding: 70px;
+    text-align: center;
+}
+.boots > h2 {
+    color:white;
+    font-size: 50px;
+    margin-top: 35px;
+}
+/****************************** End Boots ***************************/
+/****************************** Start Footer ************************/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 115px;
+    background-color: var(--very-dark-violet);
+    color: white;
+}
+footer > h2 {
+    margin: 0;
+}
+.footer-lists {
+    flex: 1;
+}
+.footer-lists > ul {
+     display: flex;
+    justify-content: center;
+}
+.footer-lists > ul > li {
+    display: inline-block;
+    margin-inline: 40px;
+    text-align: left;
+}
+.footer-lists > ul > li > ul > li > a:hover {
+    color: var(--cyan);
+}
+.social-img:hover {
+    cursor: pointer;
+    filter: invert(0) sepia(1) saturate(7) hue-rotate(100deg);
+}
+/****************************** End Footer ************************/
+}
