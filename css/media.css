@@ -69,7 +69,7 @@
 /******************************** End Landing ********************************/
 /******************************** Start Shorten ******************************/
     .shorten .form {
-        background: url('/images/bg-shorten-desktop.svg');
+        background: url('images/bg-shorten-desktop.svg');
         background-color: var(--dark-violet);
         display: flex;
         align-items: center;
@@ -164,7 +164,7 @@
 /******************************** End Features ******************************/
 /****************************** Start Boots ***************************/
 .boots {
-    background: url('/images/bg-boost-desktop.svg');
+    background: url('images/bg-boost-desktop.svg');
     background-size: cover;
     background-color: var(--dark-violet);
     padding: 70px;

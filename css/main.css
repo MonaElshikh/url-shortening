@@ -144,7 +144,7 @@ header .container > .menu {
     position: relative;
 }
 .shorten  .form {
-    background: url('/images/bg-shorten-mobile.svg');
+    background: url('images/bg-shorten-mobile.svg');
     background-color: var(--dark-violet);
     padding: 20px;
     border-radius:var(--radius);
@@ -271,7 +271,7 @@ header .container > .menu {
 /****************************** End Features **************************/
 /****************************** Start Boots ***************************/
 .boots {
-    background: url('/images/bg-boost-mobile.svg');
+    background: url('images/bg-boost-mobile.svg');
     background-size: cover;
     background-color: var(--dark-violet);
     padding: 70px;
