@@ -63,7 +63,6 @@ function shortenLink() {
     });
 }
 function addShortenLinksToPage() {
-    console.log(source);
     source.forEach((element) => {
         let copyDiv = document.createElement("div");
         copyDiv.className = "copy-link";

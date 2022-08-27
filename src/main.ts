@@ -60,7 +60,6 @@ function shortenLink() {
 }
 // function to add links to page dom.
 function addShortenLinksToPage() {
-  console.log(source);
   source.forEach((element: shorten) => {
     let copyDiv = document.createElement("div");
     copyDiv.className = "copy-link";
@@ -115,7 +114,7 @@ function closeMenu() {
     }
   });
 }
-//#region
+//#endregion
 //#region  Calls
 loadData();
 toggleMenu();
