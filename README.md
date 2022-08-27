@@ -12,8 +12,6 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 The designs were created to the following widths: - Mobile: 375px - Desktop: 1440px
@@ -33,6 +31,8 @@ Users should be able to:
 
 ![Mobile](./screenshots/mobile.png)
 ![Desktop](./screenshots/desktop.png)
+![Copied](./screenshots/copied.png)
+![Error](./screenshots/error.png)
 
 ### Links
 
