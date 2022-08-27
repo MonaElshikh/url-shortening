@@ -50,8 +50,11 @@ ul {
     font-weight: 700;
     cursor: pointer;
 }
-.main-btn:hover {
+.main-btn:hover, 
+button:hover 
+ {
     opacity: .5;
+    cursor: pointer;
 }
 /***************************** End Global ******************************/
 /***************************** Start Header *****************************/
@@ -188,16 +191,23 @@ header .container > .menu {
     position: relative;
     margin-bottom: 25px;
 }
-.copy-link > h4 {
+.copy-link > a {
     margin: 0;
     padding: 15px 20px;
     text-align: left;
     color: var(--dark-violet);
     font-size: 16px;
+    display: block;
+    cursor: pointer;
 }
-.copy-link > h4:nth-child(2) {
+.copy-link > a:first-child {
+    word-break: break-all;
+}
+.copy-link > a:nth-child(2) {
     border-top: solid 1px var(--gray);
     color: var(--cyan);
+    margin-right: 0;
+    margin-left: auto;
 }
 .copy-link > button {
     border-radius: var(--radius);

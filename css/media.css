@@ -1,7 +1,4 @@
 @media (min-width:1200px) {
-    button:hover {
-        opacity: .5;
-    }
 /******************************* Start Header *******************************/
 .container {
     padding-inline:115px;
@@ -100,15 +97,17 @@
         width: 80vw;
         margin-inline: auto;
     }
-    .copy-link > h4 {
+    .copy-link > a {
         margin: 0;
         padding: 15px 20px;
         text-align: left;
         color: var(--dark-violet);
         font-size: 16px;
-        flex: 1;
     }
-    .copy-link > h4:nth-child(2) {
+    .copy-link > a:first-child {
+        width: 900px;
+    }
+    .copy-link > a:nth-child(2) {
         border-top: none;
         color: var(--cyan);
         text-align: right;
