@@ -146,6 +146,7 @@
         height: 10px;
         left: 0;
         background-color: var(--cyan);
+        transform: translateX(0);
     }
     .feat-boxes .feat-box {
         margin-right: 30px;
