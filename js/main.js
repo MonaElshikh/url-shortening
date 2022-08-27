@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const shortenTxt = document.querySelector(".form > input");
 const errorMesg = document.querySelector(".form > p");
 const shortenMainDiv = document.querySelector(".shorten  > .container");
+const menu = document.querySelector(".toggle");
 const shortenBtn = document.querySelector(".form > button");
 let url = "https://api.shrtco.de/v2/shorten?url=";
 let source;
@@ -69,9 +70,11 @@ function addShortenLinksToPage() {
         let originalLink = document.createElement("a");
         originalLink.innerHTML = element.original_link;
         originalLink.href = element.original_link;
+        originalLink.setAttribute("target", "_blank");
         let shortLink = document.createElement("a");
         shortLink.innerHTML = element.short_link;
-        shortLink.href = element.short_link;
+        shortLink.setAttribute("target", "_blank");
+        shortLink.href = `https://${element.short_link}`;
         let copyBtn = document.createElement("button");
         copyBtn.innerHTML = "Copy";
         copyBtn.className = "main-btn";
@@ -94,7 +97,28 @@ function addToClipboard(event) {
     navigator.clipboard.writeText(shortLink.innerHTML);
     return true;
 }
+function toggleMenu() {
+    menu === null || menu === void 0 ? void 0 : menu.addEventListener("click", (event) => {
+        let dropDownMenu = event.target.nextElementSibling;
+        console.log(dropDownMenu);
+        dropDownMenu.classList.contains("show")
+            ? dropDownMenu.classList.remove("show")
+            : (dropDownMenu.className = "show");
+    });
+}
+function closeMenu() {
+    document.addEventListener("click", (event) => {
+        var _a;
+        if (event.target !== menu) {
+            if ((_a = menu === null || menu === void 0 ? void 0 : menu.nextElementSibling) === null || _a === void 0 ? void 0 : _a.classList.contains("show")) {
+                menu.nextElementSibling.classList.remove("show");
+            }
+        }
+    });
+}
 loadData();
+toggleMenu();
+closeMenu();
 shortenLink();
 export {};
 //# sourceMappingURL=main.js.map

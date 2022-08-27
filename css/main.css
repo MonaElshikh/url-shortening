@@ -56,6 +56,9 @@ button:hover
     opacity: .5;
     cursor: pointer;
 }
+.show {
+    display: block !important;
+}
 /***************************** End Global ******************************/
 /***************************** Start Header *****************************/
 
@@ -73,16 +76,11 @@ header .container > .menu {
     flex:1;
 }
 .menu .toggle {
+    display: block;
     width: 35px;
     margin-right: 0;
     margin-left: auto;
-}
-.toggle > span {
-    display: block;
-    width: 80%;
-    height: 2.5px;
-    background-color: var(--gray);
-    margin-bottom: 6px;
+    cursor: pointer;
 }
 .menu > ul {
     display: none;
@@ -105,7 +103,7 @@ header .container > .menu {
 }
 .menu > ul > li:nth-child(4) {
     border-top: solid 1px var(--grayish-violet);
-    padding-top: 20px;
+    padding: 20px 0;
 }
 /***************************** End Header *****************************/
 /***************************** Start Landing **************************/

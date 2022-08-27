@@ -3,6 +3,7 @@ import { shorten } from "./shorten-data";
 const shortenTxt = document.querySelector(".form > input") as HTMLInputElement;
 const errorMesg = document.querySelector(".form > p") as HTMLParagraphElement;
 const shortenMainDiv = document.querySelector(".shorten  > .container");
+const menu = document.querySelector(".toggle");
 const shortenBtn = document.querySelector(
   ".form > button"
 ) as HTMLButtonElement;
@@ -60,15 +61,17 @@ function shortenLink() {
 // function to add links to page dom.
 function addShortenLinksToPage() {
   console.log(source);
-  source.forEach((element: any) => {
+  source.forEach((element: shorten) => {
     let copyDiv = document.createElement("div");
     copyDiv.className = "copy-link";
     let originalLink = document.createElement("a");
     originalLink.innerHTML = element.original_link;
     originalLink.href = element.original_link;
+    originalLink.setAttribute("target", "_blank");
     let shortLink = document.createElement("a");
     shortLink.innerHTML = element.short_link;
-    shortLink.href = element.short_link;
+    shortLink.setAttribute("target", "_blank");
+    shortLink.href = `https://${element.short_link}`;
     let copyBtn = document.createElement("button");
     copyBtn.innerHTML = "Copy";
     copyBtn.className = "main-btn";
@@ -92,8 +95,30 @@ function addToClipboard(event: any) {
   navigator.clipboard.writeText(shortLink.innerHTML);
   return true;
 }
+// function to open /close top menu in mobile
+function toggleMenu() {
+  menu?.addEventListener("click", (event: any) => {
+    let dropDownMenu = event.target.nextElementSibling;
+    console.log(dropDownMenu);
+    dropDownMenu.classList.contains("show")
+      ? dropDownMenu.classList.remove("show")
+      : (dropDownMenu.className = "show");
+  });
+}
+// function to close top menu when click on anywere.
+function closeMenu() {
+  document.addEventListener("click", (event: any) => {
+    if (event.target !== menu) {
+      if (menu?.nextElementSibling?.classList.contains("show")) {
+        menu.nextElementSibling.classList.remove("show");
+      }
+    }
+  });
+}
 //#region
 //#region  Calls
 loadData();
+toggleMenu();
+closeMenu();
 shortenLink();
 //#endregion
