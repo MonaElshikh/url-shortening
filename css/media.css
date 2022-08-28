@@ -87,8 +87,10 @@
         left: 45px;
     }
     .shorten .form > button {
-        width: 15vw;
+       width: 15vw;
        margin-left: 20px;
+       white-space: nowrap;
+       align-self: stretch;
     }
     .shorten .copy-link {
         display: flex;
